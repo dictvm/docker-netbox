@@ -1,5 +1,5 @@
 FROM python:2.7
-MAINTAINER Pit Kleyersburg <pitkley@googlemail.com>
+MAINTAINER Daniel Heitmann <dictvm@dictvm.org>
 
 # Install dependencies
 RUN apt-get update \
@@ -9,7 +9,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone and install netbox
-ENV NETBOX_COMMIT 8341800a851851a35e8f0bb3267987ea77776c85
+ENV NETBOX_COMMIT 58e3d5ae09766b943ca9a4e3cb01927238acc212
 RUN mkdir -p /usr/src/netbox \
     && git clone https://github.com/digitalocean/netbox.git /usr/src/netbox \
     && (cd /usr/src/netbox && git checkout -q "$NETBOX_COMMIT") \
