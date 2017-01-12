@@ -1,3 +1,8 @@
+# DEPRECATED
+
+[Upstream][gh-nb] has `docker-compose` support now!
+
+
 # Netbox docker image
 
 Docker image for [NetBox][gh-nb].
